@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import Home from './pages/Home';
+import { Routes, Route, NavLink } from "react-router-dom";
+import Categories from './pages/Categories';
+import AddRecipies from './pages/Addrecipies';
+import Favorites from './pages/Favorites';
+import ShoppingList from './pages/Shopinglist';
+import Search from './pages/Search';
+import Profile from './pages/Profile';
+import styled from 'styled-components';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const StyledLink = styled(NavLink)`
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  &.active {
+    font-weight: bold;
+    color: blue;
+  }
+`;
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <nav>
+          <StyledLink to="SoYummy_groupNo_1/">Home</StyledLink>
+          <StyledLink to="SoYummy_groupNo_1/categories">Categories</StyledLink>
+          <StyledLink to="SoYummy_groupNo_1/addrecipies">Add Recipes</StyledLink> 
+          <StyledLink to="SoYummy_groupNo_1/favorites">Favorites</StyledLink>
+          <StyledLink to="SoYummy_groupNo_1/shoppinglist">Shopping List</StyledLink> 
+          <StyledLink to="SoYummy_groupNo_1/search">Search</StyledLink>
+          <StyledLink to="SoYummy_groupNo_1/profile">Profile</StyledLink>
+        </nav>
+        <Routes>
+          <Route path="SoYummy_groupNo_1/" element={<Home />} />
+          <Route path="SoYummy_groupNo_1/categories" element={<Categories />} />
+          <Route path="SoYummy_groupNo_1/addrecipies" element={<AddRecipies />} />
+          <Route path="SoYummy_groupNo_1/favorites" element={<Favorites />} />
+          <Route path="SoYummy_groupNo_1/shoppinglist" element={<ShoppingList />} />
+          <Route path="SoYummy_groupNo_1/search" element={<Search />} />
+          <Route path="SoYummy_groupNo_1/profile" element={<Profile />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
