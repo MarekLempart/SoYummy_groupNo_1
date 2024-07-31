@@ -12,6 +12,17 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarekLempart/SoYummy_groupNo_1.git"
+  },
+  "keywords": [],
+  "author": "Marek Lempart <kama.zakupy@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarekLempart/SoYummy_groupNo_1/issues"
+  },
+  "description": "",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
