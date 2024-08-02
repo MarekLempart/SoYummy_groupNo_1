@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register } from "../../Redux/authOperations";
-import css from "./AuthForm.module.css"; // Używamy 'css' jako importowanej nazwy
+import css from "../src/css/pages/AuthForm.module.css";
 
 const AuthForm = () => {
   const [name, setName] = useState("");
