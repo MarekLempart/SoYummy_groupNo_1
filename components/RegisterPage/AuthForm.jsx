@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register } from "../../Redux/authOperations";
-import css from "./AuthForm.module.css";
+import css from "./AuthForm.module.css"; // Używamy 'css' jako importowanej nazwy
 
 const AuthForm = () => {
   const [name, setName] = useState("");
@@ -50,52 +50,67 @@ const AuthForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={css.authForm}>
-      <h2>Register</h2>
-      <div>
-        <label>Name</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        {errors.name && <p className={css.error}>{errors.name}</p>}
+    <div className={css.authForm}>
+      <div className={css.authFormContainer}>
+        <div className={css.formSection}>
+          <form onSubmit={handleSubmit}>
+            <h2>Register</h2>
+            <div>
+              <label>Name</label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              {errors.name && <p className={css.error}>{errors.name}</p>}
+            </div>
+            <div>
+              <label>Email</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              {errors.email && <p className={css.error}>{errors.email}</p>}
+            </div>
+            <div>
+              <label>Password</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {errors.password && (
+                <p className={css.error}>{errors.password}</p>
+              )}
+            </div>
+            <div>
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+              {errors.confirmPassword && (
+                <p className={css.error}>{errors.confirmPassword}</p>
+              )}
+            </div>
+            {errors.form && <p className={css.error}>{errors.form}</p>}
+            <button type="submit">Sign up</button>
+            <p>
+              Already have an account?{" "}
+              <a href="/SoYummy_groupNo_1/signin">Sign in</a>
+            </p>
+          </form>
+        </div>
+        <div className={css.imageSection}>
+          <img
+            src="/path/to/registerandsignin.png"
+            alt="Register and Sign In"
+          />
+        </div>
       </div>
-      <div>
-        <label>Email</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        {errors.email && <p className={css.error}>{errors.email}</p>}
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {errors.password && <p className={css.error}>{errors.password}</p>}
-      </div>
-      <div>
-        <label>Confirm Password</label>
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />
-        {errors.confirmPassword && (
-          <p className={css.error}>{errors.confirmPassword}</p>
-        )}
-      </div>
-      {errors.form && <p className={css.error}>{errors.form}</p>}
-      <button type="submit">Sign up</button>
-      <p>
-        Already have an account? <a href="/SoYummy_groupNo_1/signin">Sign in</a>
-      </p>
-    </form>
+    </div>
   );
 };
 
