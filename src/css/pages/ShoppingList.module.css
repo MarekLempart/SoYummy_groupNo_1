@@ -1,0 +1,91 @@
+/* ShoppingList.module.css */
+
+.container {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3E4462; /* Kolor tekstu nagłówka */
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: separate; /* Użycie separate, aby uniknąć problemów z zaokrągleniami */
+    border-spacing: 0; /* Usunięcie odstępów między komórkami tabeli */
+  }
+  
+  .table thead {
+    background-color: #8BAA36; /* Zielony kolor tła */
+    color: #ffffff; /* Kolor tekstu w nagłówku tabeli */
+    border-radius: 12px; /* Zaokrąglone rogi nagłówka tabeli */
+    overflow: hidden; /* Ukrywa wszystko, co wychodzi poza zaokrąglenie */
+  }
+  
+  .table thead tr {
+    height: 58px;
+  }
+  
+  .table th {
+    text-align: center;
+    padding: 0;
+    border: none;
+    display: table-cell;
+    vertical-align: middle; /* Wyśrodkowanie pionowe */
+    color: #ffffff; /* Kolor tekstu w nagłówku tabeli */
+    position: relative; /* Umożliwia pozycjonowanie elementów wewnątrz nagłówka */
+  }
+  
+  .table td {
+    background-color: transparent;
+    color: #3E4462; /* Kolor tekstu w komórkach tabeli */
+    border-bottom: 1px solid #ddd;
+    height: 140px;
+    width: 160px;
+    text-align: center; /* Centruj tekst w komórkach */
+  }
+  
+  .tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  /* Styl dla przycisku w kolumnie Remove */
+  .button {
+    background-color: transparent; /* Przezroczyste tło */
+    color: #3E4462; /* Kolor tekstu przycisku */
+    border: none;
+    padding: 0;
+    font-size: 20px; /* Rozmiar czcionki przycisku */
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    line-height: 140px; /* Wyrównanie w pionie */
+    width: 100%; /* Ustaw szerokość, aby wyśrodkować */
+  }
+  
+  /* Zielony prostokąt w kolumnie Number */
+  .numberContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .numberBox {
+    background-color: #8BAA36; /* Zielony kolor tła */
+    width: 68px;
+    height: 35px;
+    border-radius: 6px; /* Zaokrąglone rogi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Kolor tekstu w prostokącie */
+    font-size: 14px; /* Rozmiar czcionki tekstu w prostokącie */
+  }
+  
+  .button:hover {
+    color: #2a3b4c; /* Opcjonalny kolor tekstu przycisku przy najechaniu */
+  }
+  

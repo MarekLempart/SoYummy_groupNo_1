@@ -4,7 +4,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import Categories from './pages/Categories';
 import AddRecipies from './pages/Addrecipies';
 import Favorites from './pages/Favorites';
-import ShoppingList from './pages/Shopinglist';
+import ShoppingList from './pages/ShoppingList';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
 import styled from 'styled-components';
