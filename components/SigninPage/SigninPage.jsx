@@ -1,4 +1,4 @@
-import AuthForm from "./AuthForm"; // Import AuthForm
+import AuthForm from "../RegisterPage/RegisterPage";
 
 const SigninPage = () => {
   return (
