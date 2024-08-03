@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register, login } from "../../Redux/authOperations";
 import PropTypes from "prop-types";
-import styles from "./AuthForm.module.css";
+import css from "./AuthForm.module.css";
 
 const AuthForm = ({ isRegister }) => {
   const [email, setEmail] = useState("");
@@ -51,7 +51,7 @@ const AuthForm = ({ isRegister }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.authForm}>
+    <form onSubmit={handleSubmit} className={css.authForm}>
       <h2>{isRegister ? "Register" : "Sign In"}</h2>
       <div>
         <label>Email</label>
@@ -60,7 +60,7 @@ const AuthForm = ({ isRegister }) => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        {errors.email && <p className={styles.error}>{errors.email}</p>}
+        {errors.email && <p className={css.error}>{errors.email}</p>}
       </div>
       <div>
         <label>Password</label>
@@ -69,7 +69,7 @@ const AuthForm = ({ isRegister }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        {errors.password && <p className={styles.error}>{errors.password}</p>}
+        {errors.password && <p className={css.error}>{errors.password}</p>}
       </div>
       {isRegister && (
         <div>
@@ -80,7 +80,7 @@ const AuthForm = ({ isRegister }) => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           {errors.confirmPassword && (
-            <p className={styles.error}>{errors.confirmPassword}</p>
+            <p className={css.error}>{errors.confirmPassword}</p>
           )}
         </div>
       )}
@@ -97,7 +97,7 @@ const AuthForm = ({ isRegister }) => {
           </>
         )}
       </p>
-      {errors.form && <p className={styles.error}>{errors.form}</p>}
+      {errors.form && <p className={css.error}>{errors.form}</p>}
     </form>
   );
 };
