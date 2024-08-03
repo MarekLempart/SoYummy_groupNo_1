@@ -1,9 +1,12 @@
-import AuthForm from "../AuthForm/AuthForm";
+import React from "react";
+import AuthForm from "../../components/AuthForm/AuthForm";
+import css from "./RegisterPage.module.css";
 
 const RegisterPage = () => {
   return (
-    <div>
-      <AuthForm />
+    <div className={css.registerContainer}>
+      <h2 className={css.registerTitle}>Register</h2>
+      <AuthForm isRegister />
     </div>
   );
 };
