@@ -1,17 +1,16 @@
 import { lazy } from "react";
-import { Routes, Route, NavLink } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
-
-import Home from "./pages/Home";
-import Categories from "./pages/Categories";
 import AddRecipies from "./pages/Addrecipies";
+import Categories from "./pages/Categories";
 import Favorites from "./pages/Favorites";
-import ShoppingList from "./pages/ShoppingList";
-import Search from "./pages/Search";
+import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import RegisterPage from "./components/RegisterPage/RegisterPage";
-import SignInPage from "./components/SigninPage/SigninPage";
+import Search from "./pages/Search";
+import ShoppingList from "./pages/ShoppingList";
+// import RegisterPage from "./components/RegisterPage/RegisterPage";
+// import SignInPage from "./components/SigninPage/SigninPage";
 
 const WelcomePage = lazy(() => import("./components/WelcomePage/WelcomePage"));
 
