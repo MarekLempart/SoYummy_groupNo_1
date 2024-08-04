@@ -2,7 +2,7 @@ import { lazy } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import WelcomePage from "./components/WelcomePage/WelcomePage";
+
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import AddRecipies from "./pages/Addrecipies";
@@ -13,11 +13,7 @@ import Profile from "./pages/Profile";
 import RegisterPage from "./components/RegisterPage/RegisterPage";
 import SignInPage from "./components/SigninPage/SigninPage";
 
-const WelcomePage = lazy(() =>
-  import("./components/WelcomePage/WelcomePage").then((module) => ({
-    default: module.MainPage,
-  }))
-);
+const WelcomePage = lazy(() => import("./components/WelcomePage/WelcomePage"));
 
 function App() {
   const StyledLink = styled(NavLink)`
