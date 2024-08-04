@@ -1,1 +1,0 @@
-import{j as e}from"./index-DZQ_8k4J.js";const i=()=>e.jsxs("div",{children:[e.jsx("h1",{children:"Welcome to the app!"}),e.jsx("p",{children:"This app offers more than just a collection of recipes - it is designed to be your very own digital cookbook. You can easily save and retrieve your own recipes at any time.."})]});export{i as default};
